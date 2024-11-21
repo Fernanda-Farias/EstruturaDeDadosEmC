@@ -1,0 +1,3 @@
+C:/Estudos/Análise e Desenvolvimento de Sistemas/2° Semestre/Estrutura de Dados I/CLionProjetos/cmake-build-debug/CMakeFiles/CLionProjetos.dir
+C:/Estudos/Análise e Desenvolvimento de Sistemas/2° Semestre/Estrutura de Dados I/CLionProjetos/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Estudos/Análise e Desenvolvimento de Sistemas/2° Semestre/Estrutura de Dados I/CLionProjetos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
