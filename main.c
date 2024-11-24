@@ -1,26 +1,35 @@
-/* Faça um programa que contenha duas variáveis inteiras. Leia estas variáveis do teclado. Em seguida,
-compare seus endereços e exiba o conteúdo do maior endereço.  */
+/* 2. Make a program initially allocate a vector with 3 integers, ask the user how many values he
+want to inform, use REALLOC if it is more than 3 values, read and present the values.  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main () {
+int main() {
 
-    int priNum, segNum;
+    int i, *array, qnt = 3;
+    array = (int*)calloc(qnt, sizeof(int));
 
-    printf("\nDigite o primeiro numero: ");
-    scanf("%d", &priNum);
-    printf("Digite o segundo numero: ");
-    scanf("%d", &segNum);
+    if (!array) {
+        printf("Error: Unallocated memory!");
+        break;
+    }
 
-    printf("\nO endereco do primeiro numero eh: %p", &priNum);
-    printf("\nO endereco do segundo numero eh: %p", &segNum);
+    printf("Who many values you want? ");
+    scanf("%d", &qnt);
 
-    if (&priNum > &segNum) {
-        printf("\nO conteudo do maior ponteiro eh: %d", priNum);
-    } else if (&priNum < &segNum) {
-        printf("\nO conteudo do maior numero eh: %d", segNum);
-    } else {
-        printf("\nOcorreu um erro ao comparar os enderecos de memoria.");
+    if (qnt > 3) {
+        array = (int*)realloc(array, sizeof(qnt));
+    }
+
+    printf("Informe os valores do array: ");
+    for (i = 0; i < qnt; i++) {
+        printf("\nValor do Array[%d]: ", i);
+        scanf("%d", &array[i]);
+    }
+
+    printf("Valores do Array: ");
+    for (i = 0; i < qnt; i++) {
+        printf("%d, ", array[i]);
     }
     return 0;
 }
